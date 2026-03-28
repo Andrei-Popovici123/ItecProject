@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
                 targetPos.x += input.x;
                 targetPos.y += input.y;
 
-                if (isWalkable(targetPos))
+                if (IsWalkable(targetPos))
                 {
                     StartCoroutine(Move(targetPos));
                 }
@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    private bool isWalkable(Vector3 targetPos)
+    private bool IsWalkable(Vector3 targetPos)
     {
         if (Physics2D.OverlapCircle(targetPos, 0.2f, solidObjectsLayer | interactablesLayer) != null)
         {
