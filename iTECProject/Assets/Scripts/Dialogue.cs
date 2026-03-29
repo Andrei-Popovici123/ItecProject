@@ -8,8 +8,13 @@ public class Dialogue
 {
     [SerializeField] List<string> lines;
 
-    public List<string> Lines
-    {
-        get {  return lines; }
-    }
+    public bool hasChoice;
+
+    [TextArea]
+    public string yesResponse;
+
+    [TextArea]
+    public string noResponse;
+
+    public List<string> Lines => lines;
 }
